@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator with Logo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        input[type="file"] {
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>QR Code Generator with Logo</h1>
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <input type="text" name="data" placeholder="Enter data or URL" required><br>
+        <input type="range" name="scale" min="200" max="2000" value="500" required><br>
+        <input type="file" name="logo" accept="image/*"><br>
+        <button type="submit">Generate QR Code</button>
+    </form>
+</body>
+</html>
